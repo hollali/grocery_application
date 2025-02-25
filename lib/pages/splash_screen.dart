@@ -18,6 +18,64 @@ class SplashScreen extends StatelessWidget {
             ),
             child: Image.asset('lib/assets/logo/logo - 1.png'),
           ),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Text(
+              'We deliver your groceries to your doorstep',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.normal,
+                color: Color(0xFF000000),
+                fontFamily: 'Poppins',
+              ),
+            ),
+          ),
+          //* Fresh items everyday
+          Text(
+            "Fresh items everyday",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[800],
+              fontFamily: 'Poppins',
+            ),
+          ),
+          const Spacer(),
+
+          GestureDetector(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            ),
+            child: SizedBox(
+              width: 200,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                padding: const EdgeInsets.all(24),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'Get Started',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ]),
+              ),
+            ),
+          ),
+          const Spacer(),
         ],
       ),
     );

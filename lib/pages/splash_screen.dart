@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
           const Spacer(),
 
           GestureDetector(
-            onTap: () => Navigator.push(
+            onTap: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => LoginPage()),
             ),

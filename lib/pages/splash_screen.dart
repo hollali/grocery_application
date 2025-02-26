@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_application/pages/login_page.dart'; // Adjust the import path as necessary
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({required Key key}) : super(key: key);

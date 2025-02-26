@@ -37,7 +37,7 @@ class SplashScreen extends StatelessWidget {
             "Fresh items everyday",
             style: TextStyle(
               fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.normal,
               color: Colors.grey[800],
               fontFamily: 'Poppins',
             ),

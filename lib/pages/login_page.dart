@@ -52,6 +52,7 @@ class LoginPage extends StatelessWidget {
                 textStyle: TextStyle(fontFamily: 'Poppins'),
                 prefixIcon: Icons.person,
               ),
+              const SizedBox(height: 20),
 
               //* Password TextField
               MyTextField(
@@ -61,6 +62,7 @@ class LoginPage extends StatelessWidget {
                 textStyle: TextStyle(fontFamily: 'Poppins'),
                 prefixIcon: Icons.lock,
               ),
+              const SizedBox(height: 20),
 
               //* Login Button
               ElevatedButton(

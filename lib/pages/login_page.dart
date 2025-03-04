@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
               //* Logo
               Image.asset(
-                'assets/logo/avocado.png',
+                'lib/assets/logo/avocado.png',
                 width: 100,
               ),
               const SizedBox(height: 50),

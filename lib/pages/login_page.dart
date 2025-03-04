@@ -64,15 +64,27 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              //* Login Button
-              ElevatedButton(
-                onPressed: login,
-                child: Text('Login'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF1C8E6B),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+              //* Forgot Password
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      /*onTap: () =>Navigator.pushReplacement( 
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ForgotPasswordPage(),
+                      ),*/
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Color(0xFF1C8E6B),
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
               //* Logo
               Image.asset(
-                'assets/logo/logo - 1.png',
+                'assets/logo/avocado.png',
                 width: 100,
               ),
               const SizedBox(height: 50),
@@ -51,6 +51,27 @@ class LoginPage extends StatelessWidget {
                 obscureText: false,
                 textStyle: TextStyle(fontFamily: 'Poppins'),
                 prefixIcon: Icons.person,
+              ),
+
+              //* Password TextField
+              MyTextField(
+                controller: passwordController,
+                hintText: 'Password',
+                obscureText: true,
+                textStyle: TextStyle(fontFamily: 'Poppins'),
+                prefixIcon: Icons.lock,
+              ),
+
+              //* Login Button
+              ElevatedButton(
+                onPressed: login,
+                child: Text('Login'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF1C8E6B),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
               ),
             ],
           )),

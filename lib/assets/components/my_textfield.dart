@@ -39,31 +39,31 @@ class _MyTextFieldState extends State<MyTextField> {
         style: widget.textStyle,
         decoration: InputDecoration(
           enabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
               borderSide: BorderSide(color: Colors.grey)),
-
-              focusedBorder:  OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.green),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.green),
+          ),
+          fillColor: Colors.white,
+          filled: true,
+          hintText: widget.hintText,
+          hintStyle: const TextStyle(color: Colors.grey),
+          contentPadding:
+              EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          prefixIcon:
+              widget.prefixIcon != null ? Icon(widget.prefixIcon) : null,
+          suffixIcon: widget.obscureText
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      obscureText = !obscureText;
+                    });
+                  },
+                  icon: Icon(
+                      obscureText ? Icons.visibility : Icons.visibility_off),
+                )
+              : null,
         ),
-        fillColor: Colors.white,
-        filled: true,
-        hintText: widget.hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-        prefixIcon: widget.prefixIcon != null
-        ? Icon(widget.prefixIcon)
-        : null,
-        suffixIcon: widget.obscureText 
-        ? IconButton(
-          onPressed: () {
-            setState(() {
-              obscureText = !obscureText;
-            });
-          },
-          icon: Icon(obscureText ? Icons.visibility : Icons.visibility_off),
-        )
-        : null,
-      ),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_application/assets/components/square_tile.dart';
 import '../assets/components/my_textfield.dart';
+import '../assets/components/my_button.dart'; // Add this line
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -10,6 +12,11 @@ class LoginPage extends StatelessWidget {
 
   //* Login Function
   void login() {}
+
+  //* Sign User In Function
+  void signUserIn() {
+    // Add your sign-in logic here
+  }
 
   //* Build Method
 
@@ -28,7 +35,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
               //* Logo
               Image.asset(
-                'lib/assets/logo/avocado.png',
+                'lib/assets/logo/logo - 1.png',
                 width: 100,
               ),
               const SizedBox(height: 50),
@@ -87,6 +94,96 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(height: 20),
+              MyButton(
+                text: 'Login',
+                icon: Icons.login,
+                onTap: signUserIn,
+              ),
+              const SizedBox(height: 25),
+
+              //* or Continue with Google
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        'or Continue with',
+                        style: TextStyle(
+                          color: Color(0xFF1C8E6B),
+                          fontSize: 14,
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Divider(
+                        height: 1,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  //* Google Button
+                  SquareTile(imagePath: 'lib/assets/images/google.png'),
+                  SizedBox(width: 15),
+
+                  //* apple Button
+                  SquareTile(imagePath: 'lib/assets/images/apple.png'),
+                  SizedBox(width: 15),
+
+                  //* Facebook Button
+                  SquareTile(imagePath: 'lib/assets/images/facebook.png'),
+                  SizedBox(width: 15),
+
+                  //* Twitter Button
+                  SquareTile(imagePath: 'lib/assets/images/twitter.png'),
+                  SizedBox(width: 15),
+                ],
+              ),
+              const SizedBox(height: 25),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Don\'t have account?',
+                    style: TextStyle(
+                      color: Color(0xFF1C8E6B),
+                    ),
+                  ),
+                  const SizedBox(height: 4                      
+                      
+),
+                  GestureDetector(
+                    // onTap () => Navigator.pushReplacement(
+                    //context,
+                    //MaterialPageRoute(builder: (context) => SignUppage()),
+                    //),
+                    child: Text(
+                      'Register now',
+                      style: TextStyle(
+                        color: Color(0xFF1C8E6B),
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'poppins',
+                      ),
+                    ),
+                  ),
+                ]),
             ],
           )),
         ),

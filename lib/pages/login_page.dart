@@ -157,33 +157,29 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Don\'t have account?',
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Text(
+                  'Don\'t have account?',
+                  style: TextStyle(
+                    color: Color(0xFF1C8E6B),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                GestureDetector(
+                  // onTap () => Navigator.pushReplacement(
+                  //context,
+                  //MaterialPageRoute(builder: (context) => SignUppage()),
+                  //),
+                  child: Text(
+                    'Register now',
                     style: TextStyle(
                       color: Color(0xFF1C8E6B),
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'poppins',
                     ),
                   ),
-                  const SizedBox(height: 4                      
-                      
-),
-                  GestureDetector(
-                    // onTap () => Navigator.pushReplacement(
-                    //context,
-                    //MaterialPageRoute(builder: (context) => SignUppage()),
-                    //),
-                    child: Text(
-                      'Register now',
-                      style: TextStyle(
-                        color: Color(0xFF1C8E6B),
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'poppins',
-                      ),
-                    ),
-                  ),
-                ]),
+                ),
+              ]),
             ],
           )),
         ),

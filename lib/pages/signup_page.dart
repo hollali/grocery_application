@@ -79,6 +79,16 @@ class SignupPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 10,),
 
+                  //* confirm password text field
+                  MyTextField(
+                    controller: confirmPasswordController,
+                    hintText: 'Confirm your password',
+                    obscureText: true,
+                    textStyle: TextStyle(fontFamily: 'Poppins'),
+                    prefixIcon: Icons.lock,
+                  ),
+                  const SizedBox(height: 10,),
+
                   
                 ],
               ),

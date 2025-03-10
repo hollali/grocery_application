@@ -164,7 +164,7 @@ class LoginPage extends StatelessWidget {
                     color: Color(0xFF1C8E6B),
                   ),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 10),
                 GestureDetector(
                   // onTap () => Navigator.pushReplacement(
                   //context,

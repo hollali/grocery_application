@@ -89,7 +89,37 @@ class SignupPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 10,),
 
-                  
+                  //* sign up button
+                  MyButton(text: 'Sign Up',
+                  icon: Icons.app_registration,
+                  onTap: signUserUp,
+                  ),
+                  const SizedBox(height: 20,),
+
+                  //* already have an account text
+                  Padding(padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    children: [
+                      Expanded(child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),),
+                      Padding(padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        'Or continue with',
+                        style: TextStyle(
+                          color: Colors.grey[700],
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                      ),
+                      Expanded(child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),),
+                    ],
+                  ),
+                  )
                 ],
               ),
             ),),

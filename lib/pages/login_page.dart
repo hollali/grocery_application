@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_application/assets/components/square_tile.dart';
 import '../assets/components/my_textfield.dart';
 import '../assets/components/my_button.dart'; // Add this line // Ensure correct import path
-import './signup_page.dart'; // Add this line
+import './signup_page.dart'; // Ensure correct import path
 import './forgot_password.dart'; // Add this line
 
 class LoginPage extends StatelessWidget {
@@ -80,12 +80,12 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     GestureDetector(
-                      onTap: () =>Navigator.pushReplacement( 
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ForgotPasswordPage(),
-                    ),
-                    ),
+                      onTap: () => Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ForgotPasswordPage(),
+                        ),
+                      ),
                       child: Text(
                         'Forgot Password?',
                         style: TextStyle(
@@ -169,11 +169,11 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 GestureDetector(
-                  onTap: () =>Navigator.pushReplacement( 
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SignupPage(),
-                      ),
+                  onTap: () => Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUpPage(),
+                    ),
                   ),
                   child: Text(
                     'Register now',

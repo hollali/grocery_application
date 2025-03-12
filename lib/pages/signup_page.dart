@@ -46,9 +46,7 @@ class SignupPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-
                   const SizedBox(height: 25,),
-
                   //* name text field
                   MyTextField(
                     controller: nameController,
@@ -58,7 +56,6 @@ class SignupPage extends StatelessWidget {
                     prefixIcon: Icons.person,
                   ),
                   const SizedBox(height: 10,),
-
                   //* email text field
                   MyTextField(
                     controller: emailController,
@@ -68,7 +65,6 @@ class SignupPage extends StatelessWidget {
                     prefixIcon: Icons.email,
                   ),
                   const SizedBox(height: 10,),
-
                   //* password text field
                   MyTextField(
                     controller: passwordController,

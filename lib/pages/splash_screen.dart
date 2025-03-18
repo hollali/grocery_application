@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
             ),
           ),
           const Spacer(),
-
+          
           GestureDetector(
             onTap: () => Navigator.pushReplacement(
               context,

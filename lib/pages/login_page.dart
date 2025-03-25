@@ -163,10 +163,10 @@ class LoginPage extends StatelessWidget {
                 Text(
                   'Don\'t have account?',
                   style: TextStyle(
-                    color: Color(0xFF1C8E6B),
+                    color: Colors.grey[700],
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(width: 6),
                 GestureDetector(
                   onTap: () => Navigator.pushReplacement(
                     context,

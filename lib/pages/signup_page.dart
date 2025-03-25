@@ -155,7 +155,7 @@ class SignUpPage extends StatelessWidget {
                       SquareTile(imagePath: 'lib/assets/images/facebook.png'),
 
                       SizedBox(width: 15),
-                      
+
                       // twitter button
                       SquareTile(imagePath: 'lib/assets/images/twitter.png'),
                     ],
@@ -174,7 +174,7 @@ class SignUpPage extends StatelessWidget {
                           fontFamily: 'Poppins',
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 6),
                       GestureDetector(
                         onTap: () => Navigator.pushReplacement(
                           context,

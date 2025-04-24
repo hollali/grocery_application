@@ -3,18 +3,73 @@ import 'package:grocery_application/assets/components/my_button.dart';
 import 'package:grocery_application/assets/components/my_textfield.dart';
 import 'package:grocery_application/assets/components/square_tile.dart';
 import 'package:grocery_application/pages/login_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   SignUpPage({super.key});
 
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
   // text editing controllers
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
-
+  bool isLoading = false;
   // sign user up method
-  void signUserUp() {}
+  Future<void> signUserUp() async {
+    setState(() {
+      isLoading = true;
+    });
+
+    try {
+      //* validate password
+      if (passwordController.text != confirmPasswordController.text) {
+        throw Exception('Passwords do not match');
+      }
+      //* create user with email account
+      UserCredential userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+
+      //* Update user's display name
+      await userCredential.user?.updateDisplayName(nameController.text);
+
+      //* clear controllers
+      nameController.clear();
+      emailController.clear();
+      passwordController.clear();
+      confirmPasswordController.clear();
+
+      //* navigate to home page
+      Navigator.pushReplacement<dynamic, Object>(
+        context,
+        MaterialPageRoute<dynamic>(
+          builder: (context) => const AuthenticationPage(),
+        ),
+      );
+    } on FirebaseAuthException catch (e) {
+      String errorMessage = '';
+      switch (e.code) {
+        case 'email-already-in-use':
+          errorMessage = 'Email already in use';
+          break;
+        case 'weak-password':
+          errorMessage = 'Weak password';
+          break;
+        case 'invalid-email':
+          errorMessage = 'Invalid email';
+          break;
+        default:
+          errorMessage = 'An unknown error occurred';
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

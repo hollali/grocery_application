@@ -71,7 +71,7 @@ class _SignUpPageState extends State<SignUpPage> {
     }
     catch (e) {
       // Handle other exceptions
-      print('Error: $e');
+      String errorMessage = e.toString();
     } finally {
       setState(() {
         isLoading = false;

@@ -69,6 +69,14 @@ class _SignUpPageState extends State<SignUpPage> {
           errorMessage = 'An unknown error occurred';
       }
     }
+    catch (e) {
+      // Handle other exceptions
+      print('Error: $e');
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
   }
 
   @override

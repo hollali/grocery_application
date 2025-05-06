@@ -45,8 +45,9 @@ class _SignUpPageState extends State<SignUpPage> {
       if (passwordController.text != confirmPasswordController.text) {
         throw Exception('Passwords do not match');
       }
+      
       //* create user with email account
-      UserCredential userCredential =
+      final UserCredential userCredential =
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,

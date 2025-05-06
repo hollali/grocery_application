@@ -4,6 +4,7 @@ import 'package:grocery_application/assets/components/my_textfield.dart';
 import 'package:grocery_application/assets/components/square_tile.dart';
 import 'package:grocery_application/pages/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SignUpPage extends StatefulWidget {
   SignUpPage({super.key});
@@ -19,6 +20,20 @@ class _SignUpPageState extends State<SignUpPage> {
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
   bool isLoading = false;
+
+  void _showToast(String message, bool isError) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 2,
+      backgroundColor:
+          isError ? const Color(0xFFE57373) : const Color(0xFF1C8E6B),
+      textColor: Colors.white,
+      fontSize: 14.0,
+    );
+  }
+
   // sign user up method
   Future<void> signUserUp() async {
     setState(() {
@@ -47,12 +62,14 @@ class _SignUpPageState extends State<SignUpPage> {
       confirmPasswordController.clear();
 
       //* navigate to home page
-      Navigator.pushReplacement<dynamic, Object>(
-        context,
-        MaterialPageRoute<dynamic>(
-          builder: (context) => const AuthenticationPage(),
-        ),
-      );
+      if (mounted) {
+        Navigator.pushReplacement<dynamic, Object>(
+          context,
+          MaterialPageRoute<dynamic>(
+            builder: (context) => const AuthenticationPage(),
+          ),
+        );
+      }
     } on FirebaseAuthException catch (e) {
       String errorMessage = '';
       switch (e.code) {
@@ -68,8 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
         default:
           errorMessage = 'An unknown error occurred';
       }
-    }
-    catch (e) {
+    } catch (e) {
       // Handle other exceptions
       String errorMessage = e.toString();
     } finally {

@@ -3,6 +3,7 @@ import 'package:grocery_application/assets/components/my_button.dart';
 import 'package:grocery_application/assets/components/my_textfield.dart';
 import 'package:grocery_application/assets/components/square_tile.dart';
 import 'package:grocery_application/pages/login_page.dart';
+import 'package:grocery_application/pages/authentication.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 

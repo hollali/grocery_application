@@ -85,9 +85,11 @@ class _SignUpPageState extends State<SignUpPage> {
         default:
           errorMessage = 'An unknown error occurred';
       }
+      _showToast(errorMessage, true);
     } catch (e) {
       // Handle other exceptions
       String errorMessage = e.toString();
+      _showToast(errorMessage, true);
     } finally {
       setState(() {
         isLoading = false;

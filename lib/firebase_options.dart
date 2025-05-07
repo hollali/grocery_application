@@ -7,13 +7,13 @@ import 'package:flutter/foundation.dart'
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
 /// Example:
-/// dart
+/// ```dart
 /// import 'firebase_options.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
-///
+/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -41,48 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCXH4dDp5eHRGc7Kfe0iifnLkpTcdC3VAI',
-    appId: '1:139060751797:web:f19dfc9e1f9736fc80bdfc',
-    messagingSenderId: '139060751797',
-    projectId: 'gross-application',
-    authDomain: 'gross-application.firebaseapp.com',
-    storageBucket: 'gross-application.firebasestorage.app',
-    measurementId: 'G-98ME04XZLX',
+    apiKey: 'AIzaSyD05PgSYig03dBHSjrsjogIbufzd71ctsg',
+    appId: '1:815825452900:web:7c54dbc0ec7e34f6cf0471',
+    messagingSenderId: '815825452900',
+    projectId: 'grocerystore-6d730',
+    authDomain: 'grocerystore-6d730.firebaseapp.com',
+    storageBucket: 'grocerystore-6d730.firebasestorage.app',
+    measurementId: 'G-E08DML7C4L',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBXbPbSoNHcuaL6j5BRzUo4FQMwEmy0YOI',
-    appId: '1:139060751797:android:dac9e10e4f81c1cf80bdfc',
-    messagingSenderId: '139060751797',
-    projectId: 'gross-application',
-    storageBucket: 'gross-application.firebasestorage.app',
+    apiKey: 'AIzaSyDycVL-aeHYgaLyxICeVAfN5D4kO2udM7M',
+    appId: '1:815825452900:android:3467bd267c207aa8cf0471',
+    messagingSenderId: '815825452900',
+    projectId: 'grocerystore-6d730',
+    storageBucket: 'grocerystore-6d730.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBcJsu_VM4wosqe0KDIShKQDI0ceF2Tfvw',
-    appId: '1:139060751797:ios:86878ddc9da1fecf80bdfc',
-    messagingSenderId: '139060751797',
-    projectId: 'gross-application',
-    storageBucket: 'gross-application.firebasestorage.app',
+    apiKey: 'AIzaSyCiP0ErbPfelUiQv7LK5pjm6rVhtv17enQ',
+    appId: '1:815825452900:ios:d3654b287ce9682bcf0471',
+    messagingSenderId: '815825452900',
+    projectId: 'grocerystore-6d730',
+    storageBucket: 'grocerystore-6d730.firebasestorage.app',
     iosBundleId: 'com.example.groceryApplication',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBcJsu_VM4wosqe0KDIShKQDI0ceF2Tfvw',
-    appId: '1:139060751797:ios:86878ddc9da1fecf80bdfc',
-    messagingSenderId: '139060751797',
-    projectId: 'gross-application',
-    storageBucket: 'gross-application.firebasestorage.app',
+    apiKey: 'AIzaSyCiP0ErbPfelUiQv7LK5pjm6rVhtv17enQ',
+    appId: '1:815825452900:ios:d3654b287ce9682bcf0471',
+    messagingSenderId: '815825452900',
+    projectId: 'grocerystore-6d730',
+    storageBucket: 'grocerystore-6d730.firebasestorage.app',
     iosBundleId: 'com.example.groceryApplication',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCXH4dDp5eHRGc7Kfe0iifnLkpTcdC3VAI',
-    appId: '1:139060751797:web:294a7f89e056416980bdfc',
-    messagingSenderId: '139060751797',
-    projectId: 'gross-application',
-    authDomain: 'gross-application.firebaseapp.com',
-    storageBucket: 'gross-application.firebasestorage.app',
-    measurementId: 'G-CLXVC6HC9L',
+    apiKey: 'AIzaSyD05PgSYig03dBHSjrsjogIbufzd71ctsg',
+    appId: '1:815825452900:web:b19ec049aa0648f9cf0471',
+    messagingSenderId: '815825452900',
+    projectId: 'grocerystore-6d730',
+    authDomain: 'grocerystore-6d730.firebaseapp.com',
+    storageBucket: 'grocerystore-6d730.firebasestorage.app',
+    measurementId: 'G-1D64C66E04',
   );
 }

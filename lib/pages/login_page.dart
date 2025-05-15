@@ -276,7 +276,7 @@ class _LoginPageState extends State<LoginPage> {
                             onTap: () => Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const SignUpPage()),
+                                  builder: (context) => SignUpPage()),
                             ),
                             child: Text(
                               'Register now',
